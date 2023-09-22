@@ -1,0 +1,395 @@
+:root{
+    --orange: hsl(35, 77%, 62%);
+    --red: hsl(5, 85%, 63%);
+    --white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --paraph: 15px;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+*, *:after, *:before{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 48px;
+    color: var(--very-dark-blue);
+}
+
+h2{
+    font-size: 24px;
+    color: var(--orange);
+}
+
+h3{
+    font-size: 16px;
+    color: var(--white);
+    padding-bottom: 10px;
+}
+
+h4{
+    font-size: 20px;
+    color: var(--grayish-blue);
+    padding-bottom: 10px;
+}
+
+h5{
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+
+#contenedor-principal{
+    margin: 0 auto;
+    max-width: 375px;
+    height: auto;
+    background-color: var(--white);
+    display: grid;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.overflow{
+    overflow: hidden;
+}
+/********* HEADER *********/
+
+#bg-nav{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+.bg-nav{
+    background-color: rgb(0, 0, 26, .5);
+    width: 395px;
+    height: 100vh;
+}
+
+
+#abriendo-menu,
+#cerrando-menu{
+    background: none;
+    border: none;
+}
+
+#logo{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cerrando-menu{
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+ul{
+    margin-top: 30px;
+}
+
+li a{
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+    font-weight: bold;
+    line-height: 2.5;
+}
+
+li a:hover{
+    color: var(--orange);
+}
+
+#navegacion{
+    padding: 25px;
+    text-align: end;
+    background-color: var(--white);
+    width: 220px;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 395px;
+}
+
+.entrada-menu{
+    transition: transform 1s;
+    transform: translateX(-270px);
+}
+
+.salida-menu{
+    transition: transform 1s ease-in;
+    transform: translateX(270px);
+}
+
+ul{
+    text-align: start;
+}
+
+/******* MAIN *******/
+
+#main{
+    margin-top: 20px;
+}
+
+#imagen-decorativa img{
+    width: 100%;
+}
+
+#desktop{
+    display: none;
+}
+
+p{
+    font-size: var(--paraph);
+    line-height: 1.5;
+    color: var(--dark-grayish-blue);
+}
+
+#more{
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 10px 30px;
+    border: none;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+
+/********* ASIDE *********/
+
+#aside{
+    margin: 30px 0;
+    background-color: var(--very-dark-blue);
+    padding: 15px;
+}
+
+.apartados-aside{
+    padding: 30px 0;
+}
+
+#apartado1-aside,
+#apartado2-aside{
+    border-bottom: solid 1px var(--white);
+}
+
+#aside p{
+    color: var(--grayish-blue);
+}
+
+#apartado3-aside{
+    padding-bottom: 10px;
+}
+
+
+/********* SECTION *********/
+
+.apartados-section{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+#imagen-section1 img,
+#imagen-section2 img,
+#imagen-section3 img{
+    width: 100%;
+}
+
+
+/****** FOOTER ******/
+
+.attribution{
+    border-top: 1px solid var(--dark-grayish-blue);
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+}
+
+.attribution p{
+    line-height: 1.5;
+}
+
+.attribution a{
+    color: var(--very-dark-blue);
+}
+
+@media(min-width: 768px){
+    
+    h3{
+        font-size: 17px;
+    }
+    h4{
+        font-size: 25px;
+    }
+    
+    h5{
+        font-size: 18px;
+    }
+    #contenedor-principal{
+        max-width: 768px;
+        height: auto;
+        display: grid;
+        padding: 10px;
+        position: relative;
+        overflow:visible;
+    }
+    #header{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #abriendo-menu,
+    #cerrando-menu{
+    display: none;
+    }
+
+    #bg-nav{
+        left: 275px;
+        width: 0px;
+        height: 0px;
+    }
+
+    #navegacion{
+        padding: 0;
+        text-align: center;
+        width: auto;
+        height: 30px;
+        position: static;
+        top: 0px;
+        right: 0px;
+    }
+    .entrada-menu{
+        transform: translateX(0px);
+        
+    }
+    
+    .salida-menu{
+        transition: transform 1s ease-in;
+        transform: translateX(0px);
+    }
+    
+    #items{
+        display: flex;
+
+    }
+    #items li{
+        padding: 5px 20px;
+
+    }
+    ul{
+        margin: 0;
+    }
+    a{
+        display: inline-block;
+    }
+
+    p{
+        font-size: 18px;
+    }
+    
+    #section{
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    #bg-nav{
+        left: 723px;
+    }
+    h1{
+        font-weight: 900;
+        font-size: 58px;
+        line-height: 1;
+    }
+    h2{
+        font-size: 32px;
+        padding-top: 20px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    #contenedor-principal{
+        max-width: 1200px; 
+        display: grid;
+        grid-template-rows: 50px 2fr 200px 100px;
+        grid-template-columns: 2fr 1fr; 
+        grid-template-areas: 
+        "header header"
+        "main aside"
+        "section section"
+        "footer footer";
+        gap: 20px;
+    }
+    #header{
+        grid-area: header;
+    }
+    #main{
+        grid-area: main;
+    }
+    
+    #texto-main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "titular parrafo"
+        "titular boton";
+        gap: 20px;
+    }
+    #texto-main h1{
+        grid-area: titular;
+    }
+    #texto-main p{
+        grid-area: parrafo;
+        padding-top: 25px;
+    }
+    #more{
+        font-size: 14px;
+        width: 200px;
+        height: 50px;
+        padding: 0;
+    }
+    #desktop{
+        display: block;
+    }
+    #mobile{
+        display: none;
+    }
+    #aside{
+        padding: 25px 20px;
+        grid-area: aside;
+        margin-top: 20px;
+    }
+    
+    .apartados-aside{
+        padding: 35px 0;
+    }
+    #section{
+        grid-area: section;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .attribution{
+        grid-area: footer;
+    }
+}
